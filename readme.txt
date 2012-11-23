@@ -38,3 +38,6 @@ No, the keywords entered are **NOT** case sensative
 == Changelog ==
 = 1.0 =
 * Initial release
+
+= 1.01 =
+* Add case sensitive option to settings
