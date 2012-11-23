@@ -3,7 +3,7 @@
  * Plugin Name: Internal Link Manager
  * Plugin URI: http://www.kevinleary.net
  * Description: Easily manage internal links throughout your WordPress site
- * Version: 1.0
+ * Version: 1.01
  * Author: Kevin Leary
  * Author URI: http://www.kevinleary.net
  *
