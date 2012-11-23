@@ -48,11 +48,13 @@ class Internal_Link_Manager
 		$html = NULL;
 	    
 	    // Get settings
-	    $maxuse = get_option( __CLASS__ . '-maxuse');
-	    $metabox_option = get_option( __CLASS__ . '-metabox');
+	    $maxuse = get_option( __CLASS__ . '-maxuse' );
+	    $case = get_option( __CLASS__ . '-case' );
+	    $metabox_option = get_option( __CLASS__ . '-metabox' );
 		
 		// Build REGEX array
 		$anysign = '(.|\A|\Z|)';
+		$case_sensative = ( $case == 'No' ) ? '(?i)' : '';
 		$permalink = get_permalink();
 		foreach ( $keywords as $keyword => $url ) {
 		
@@ -65,7 +67,7 @@ class Internal_Link_Manager
 				$url = 'http://' . $url;
 			
 			// Create REGEX find/replace
-			$reg = '/'.$anysign.'('.$keyword.')'.$anysign.'/';
+			$reg = '/' . $case_sensative . $anysign.'('.$keyword.')'.$anysign.'/ ';
 			$expr_from[] = $reg;
 			$expr_to[] = '$1<a href="'.$url.'">$2</a>$3';
 		}
@@ -128,7 +130,8 @@ class Internal_Link_Manager
 		// Options
 	    $selects = array(
 	        'maxuse' => array(1,2,3,4,5),
-	        'metabox' => array('Yes', 'No')
+	        'metabox' => array('Yes', 'No'),
+	        'case' => array('Yes', 'No')
 	    );    
 	    
 	    // Postdata handling
@@ -191,12 +194,17 @@ class Internal_Link_Manager
 	        <h3>Options</h3>
 	        <table class="options">
 	            <tr>
-	            	<td style="padding-right:20px;">Links Per Post</td>
+	            	<td style="padding-right:20px;">Links per post</td>
 	            	<td style="padding-right:20px;">'.$sel['maxuse'].'</td>
 	            	<td><span class="note">Maximum number of links added to a given post</span></td>
 	            </tr>
 	            <tr>
-	            	<td style="padding-right:20px;">Author Coaching</td>
+	            	<td style="padding-right:20px;">Case sensative</td>
+	            	<td style="padding-right:20px;">'.$sel['case'].'</td>
+	            	<td><span class="note">Should matches be case insensative?</span></td>
+	            </tr>
+	            <tr>
+	            	<td style="padding-right:20px;">Author coaching</td>
 	            	<td style="padding-right:20px;">'.$sel['metabox'].'</td>
 	            	<td><span class="note">Add a metabox to the post "Edit" screen, coaching authors to use keywords in posts</span></td>
 	            </tr>
