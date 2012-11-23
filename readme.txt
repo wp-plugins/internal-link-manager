@@ -4,9 +4,9 @@ Donate link: http://www.kevinleary.net
 Tags: internal linking, links, search engine optimization, seo, link, internal link, internal links, link building, keyword, keyword links, keyword coaching
 Requires at least: 2.9+
 Tested up to: 3.4.2
-Stable tag: 1.01
+Stable tag: 1.1
 
-Automatically add internal links throughout your website
+Easily manage automated internal links throughout your website
 
 == Description ==
 
@@ -39,5 +39,5 @@ No, the keywords entered are **NOT** case sensative
 = 1.0 =
 * Initial release
 
-= 1.01 =
+= 1.1 =
 * Add case sensitive option to settings
