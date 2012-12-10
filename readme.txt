@@ -1,7 +1,7 @@
 === Internal Link Manager ===
 Contributors: kevinlearynet
 Donate link: http://www.kevinleary.net
-Tags: internal linking, links, search engine optimization, seo, link, internal link, internal links, link building, keyword, keyword links, keyword coaching
+Tags: internal linking, links, search engine optimization, seo, link, internal link, internal links, link building, keyword, keyword links, keyword coaching, autolink, linking, auto link, hyperlink, auto-linker, auto-link
 Requires at least: 2.9+
 Tested up to: 3.4.2
 Stable tag: 1.12
