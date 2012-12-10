@@ -67,7 +67,7 @@ class Internal_Link_Manager
 				$url = 'http://' . $url;
 			
 			// Create REGEX find/replace
-			$reg = '/' . $case_sensative . $anysign.'('.$keyword.')'.$anysign.'/ ';
+			$reg = '/' . $case_sensative . $anysign.'(\s'.$keyword.'\s)'.$anysign.'/ ';
 			$expr_from[] = $reg;
 			$expr_to[] = '$1<a href="'.$url.'">$2</a>$3';
 		}
